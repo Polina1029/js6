@@ -52,7 +52,55 @@
             <div class="header_btn">
                 <a href="#" class="btn_green">Start your project</a>
                 <a href="#" class="btn">Sign in</a>
+                <!-- <a href="#" class="btn" onclick="showModal()">Log in</a> -->
             </div>
+
+            <div class="modal" id="modal" style="display: none;">
+                <div class="modal_content">
+                    <span onclick="hideModal()">x</span>
+                    <p>Log in</p>
+                    <input type="text" placeholder="Your name">
+                    <input type="text" placeholder="Your email">
+                    <input type="text" placeholder="Password">
+                    <input type="text" placeholder="Return password">
+                    <input type="button" value="Log in" class="btn_form">
+                </div>
+            </div>
+
+            <div class="modal" id="modal_log" style="display: none;">
+                <div class="modal_content">
+                    <span onclick="hideModal2()">x</span>
+                    <p>Sign in</p>
+                    <input type="text" placeholder="Your email">
+                    <input type="text" placeholder="Password">
+                    <input type="button" value="Sign in" class="btn_form">
+                </div>
+            </div>
+
+            <script>
+                let modal = document.getElementById("modal");
+        
+                function showModal() {
+                    modal.style.display = "flex";
+                }
+        
+                function hideModal() {
+                    modal.style.display = "none";
+                }
+
+
+
+                let modallog = document.getElementById("modal_log");
+        
+                function showModal2() {
+                    modallog.style.display = "flex";
+                }
+
+                function hideModal2() {
+                    modallog.style.display = "none";
+                }
+        
+            </script>
 
         </div>
     </header>
@@ -216,10 +264,9 @@
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const buttons = document.querySelectorAll('.btn_media');
-            const images = document.querySelectorAll('.all_sleek_info_left img');
-            const texts = document.querySelectorAll('.all_sleek_info_right .text');
+            let buttons = document.querySelectorAll('.btn_media');
+            let images = document.querySelectorAll('.all_sleek_info_left img');
+            let texts = document.querySelectorAll('.all_sleek_info_right .text');
 
             buttons.forEach(button => {
                 button.addEventListener('click', () => {
@@ -235,7 +282,6 @@
                     texts[index].classList.add('active');
                 });
             });
-        });
     </script>
     <!-- sleek end -->
 
