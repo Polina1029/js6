@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript3</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js"></script>
+
+</head>
+
+<body>
+
+    <!-- header start -->
+    <header>
+        <div class="header_menu container">
+            <div class="logo_nav">
+                <div class="logo">
+                    <a href="#"><img src="assets/image/logo/logo.png" alt=""></a>
+                </div>
+
+                <div class="nav_menu">
+
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">Product <img src="assets/image/header/Vector.png"
+                                alt=""></button>
+                        <div class="dropdown-content" id="myDropdown">
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button onclick="my()" class="dropbtn">Product <img src="assets/image/header/Vector.png"
+                                alt=""></button>
+                        <div class="dropdown-content dropdown-content-two" id="my">
+                            <a href="#">3</a>
+                            <a href="#">2</a>
+                            <a href="#">1</a>
+                        </div>
+                    </div>
+
+                    <a href="#">Beta</a>
+                    <a href="#">Pricing</a>
+
+                </div>
+            </div>
+
+
+            <div class="header_btn">
+                <a href="#" class="btn_green">Start your project</a>
+                <a href="#" class="btn">Sign in</a>
+            </div>
+
+        </div>
+    </header>
+    <!-- header end -->
+
+
+    <!-- banner start  -->
+    <div class="banner container">
+        <div class="banner_left">
+            <div class="banner_storage">
+                <img src="assets/image/banner/storage.png" alt="">
+                Storage
+            </div>
+
+            <p class="name_banner">Store and serve <br>any type of digital content</p>
+
+            <p class="info">An open source Object store service with unlimited scalability, for <br>any file type.</p>
+            <p class="about">With custom policies and permissions that are familiar and easy to <br> implement.</p>
+
+            <div class="banner_btn">
+                <a href="#" class="btn_green">Start a project</a>
+            </div>
+        </div>
+
+        <div class="banner_right">
+            <div class="slider">
+                <img src="assets/image/banner/Rectangle.png" alt="" class="slide active">
+                <img src="assets/image/banner/2.jpg" alt="" class="slide">
+                <img src="assets/image/banner/3.jpg" alt="" class="slide">
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const slides = document.querySelectorAll(".slide");
+                let currentSlide = 0;
+
+                function showNextSlide() {
+                    slides[currentSlide].classList.remove("active");
+
+                    currentSlide = (currentSlide + 1) % slides.length;
+
+                    slides[currentSlide].classList.add("active");
+                }
+
+                setInterval(showNextSlide, 3000);
+            });
+        </script>
+    </div>
+    <!-- banner end -->
+
+
+    <!-- adventages start -->
+    <div class="adventages container">
+        <div class="advantages_cards">
+            <div class="advantages_card">
+                <div class="card_images">
+                    <img src="assets/image/adventages/1.png" alt="">
+                </div>
+                <p class="name">Interoperable</p>
+                <p class="info">Integrates well with the rest of Supabase ecosystem, including Auth and Postgres.
+                </p>
+            </div>
+
+            <div class="advantages_card">
+                <div class="card_images">
+                    <img src="assets/image/adventages/2.png" alt="">
+                </div>
+                <p class="name">Lightning fast</p>
+                <p class="info">Thin API server layer that leverages Postgres' permissions and performance.</p>
+            </div>
+
+            <div class="advantages_card">
+                <div class="card_images">
+                    <img src="assets/image/adventages/3.png" alt="">
+                </div>
+                <p class="name">Dependable</p>
+                <p class="info info2">Enterprise-level scalability and durability.</p>
+            </div>
+        </div>
+    </div>
+    <!-- adventages end -->
+     
+
+    <!-- sleek start -->
+    <div class="sleek container">
+        <div class="sleek_media_inf">
+            <p class="title_sleek">Sleek dashboard for managing your media</p>
+            <p class="about">A complete Object Explorer so that any of your team can use.</p>
+            <span>Drag and drop uploading, moving objects, and multiple object selection. As easy as working on your
+                desktop.</span>
+        </div>
+        <div class="all_sleek_info">
+            <div class="all_sleek_info_left">
+                <div class="filtering_media">
+                    <div class="btns">
+                        <button class="btn_media active" data-index="0">File previews</button>
+                        <button class="btn_media" data-index="1">Column view</button>
+                        <button class="btn_media" data-index="2">List view</button>
+                        <button class="btn_media" data-index="3">Multi select actions</button>
+                        <button class="btn_media" data-index="4">Path navigator</button>
+                    </div>
+                </div>
+
+                <div class="texts">
+                    <img src="assets/image/sleek/1.png" alt="" data-index="0" class="active">
+                    <img src="assets/image/sleek/2.jpg" alt="" data-index="1">
+                    <img src="assets/image/sleek/3.jpg" alt="" data-index="2">
+                    <img src="assets/image/sleek/4.jpg" alt="" data-index="3">
+                    <img src="assets/image/sleek/5.jpg" alt="" data-index="4">
+                </div>
+            </div>
+
+            <div class="all_sleek_info_right">
+                <div class="texts">
+                    <div class="text active" data-index="0">
+                        <div class="sleek_body_left">File previews</div>
+                        <p>Preview any media type, including video and <br> audio.</p>
+                    </div>
+                    <div class="text" data-index="1">
+                        <div class="sleek_body_left">Column view</div>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                    <div class="text" data-index="2">
+                        <div class="sleek_body_left">List view</div>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="text" data-index="3">
+                        <div class="sleek_body_left">Multi select actions</div>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                    <div class="text" data-index="4">
+                        <div class="sleek_body_left">Path navigator</div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                    </div>
+                </div>
+
+                <span class="sleek_body_left">Check out our example app</span>
+                <div class="box_sleek_b_l">
+                    <span>Profile management example</span>
+                    <p>Update a user account with public profile information, including uploading a profile image.</p>
+                    <div class="box_bottom_med">
+                        <span>Created by:</span>
+                        <img src="assets/image/sleek/Rectangle.png" alt="">
+                        <p>supabase</p>
+                    </div>
+                </div>
+                <p class="bottom_p_media">nextjs-ts-user-management <img src="assets/image/sleek/cat.png" alt=""></p>
+                <div class="dropdown_3 dropdown">
+                    <button onclick="myFunction3()" class="dropbtn_3 dropbtn">
+                        <img src="assets/image/sleek/btn.png" alt="">
+                        <div id="myDropdown_3" class="dropdown_content_3 dropdown-content">
+                            <a href="#">Deploy 1</a>
+                            <a href="#">Deploy 2</a>
+                            <a href="#">Deploy 3</a>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const buttons = document.querySelectorAll('.btn_media');
+            const images = document.querySelectorAll('.all_sleek_info_left img');
+            const texts = document.querySelectorAll('.all_sleek_info_right .text');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const index = button.getAttribute('data-index');
+
+                    document.querySelector('.btn_media.active').classList.remove('active');
+                    button.classList.add('active');
+
+                    images.forEach(img => img.classList.remove('active'));
+                    images[index].classList.add('active');
+
+                    texts.forEach(text => text.classList.remove('active'));
+                    texts[index].classList.add('active');
+                });
+            });
+        });
+    </script>
+    <!-- sleek end -->
+
+    <!-- integrates satrt -->
+    <div class="integrates container">
+        <div class="title">
+            <p class="name">Integrates natively <br> with Supabase Auth</p>
+        </div>
+
+        <div class="integrates_menu">
+            <p>Using Postgres Row Level Security to create Object access rules.</p>
+            <div class="integrates_txt">
+                <p>Storage Authorization is built around Postgres so that you can use any combination of SQL, Postgres
+                    functions, and even your own metadata to write policies.Storage Authorization is built around
+                    Postgres so that you can use any combination of SQL, Postgres functions, and even your own metadata
+                    to write policies.Storage is built around Postgres so that you can use any combination of SQL,
+                    Postgres functions, and even your own metadata to write policies.</p>
+            </div>
+
+            <div class="integrates_btn">
+                <a href="#"><img src="assets/image/Integrates/Frame.png" alt="#">Expore documentation</a>
+            </div>
+            <div class="accardions">
+                <div class="accardion">
+                    <button class="accardion_txt">
+                        <p>Using Postgres Row Level Security to create Object access rules.</p>
+                        <div class="cc">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolor a laboriosam qui
+                                molestiae pariatur dolores natus illum consequuntur excepturi tenetur, aliquam ex optio
+                                deleniti aperiam sequi fugiat esse repellat.</p>
+                        </div>
+                    </button>
+                    <div class="accardion_img">
+                        <img src="assets/image/Integrates/1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="accardion">
+                    <button class="accardion_txt">
+                        <p>Using Postgres Row Level Security to create Object access rules.</p>
+                        <div class="cc">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolor a laboriosam qui
+                                molestiae pariatur dolores natus illum consequuntur excepturi tenetur, aliquam ex optio
+                                deleniti aperiam sequi fugiat esse repellat.</p>
+                        </div>
+                    </button>
+                    <div class="accardion_img">
+                        <img src="assets/image/Integrates/1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="accardion">
+                    <button class="accardion_txt">
+                        <p>Using Postgres Row Level Security to create Object access rules.</p>
+                        <div class="cc">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas dolor a laboriosam qui
+                                molestiae pariatur dolores natus illum consequuntur excepturi tenetur, aliquam ex optio
+                                deleniti aperiam sequi fugiat esse repellat.</p>
+                        </div>
+                    </button>
+                    <div class="accardion_img">
+                        <img src="assets/image/Integrates/1.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Integrates end -->
+
+
+    <!-- footer start -->
+    <footer>
+        <div class="footer_menu container">
+
+            <div class="footer_nav_menu">
+                <div class="footer_logo">
+                    <img src="assets/image/logo/logo.png" alt="">
+                    <div class="footer_links">
+                        <a href="#"><img src="assets/image/footer/1.png" alt=""></a>
+                        <a href="#"><img src="assets/image/footer/2.png" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="footer_nav">
+                    <div class="nav_footer">
+                        <a href="#" class="name">Product</a>
+                        <a href="#" class="info">Database</a>
+                        <a href="#" class="info">Authentication</a>
+                        <a href="#" class="info">Storage</a>
+                        <a href="#" class="info">Functions</a>
+                        <a href="#" class="info">Coming soon</a>
+                        <a href="#" class="info">Pricing</a>
+                    </div>
+
+                    <div class="nav_footer">
+                        <a href="#" class="name">Resources</a>
+                        <a href="#" class="info">Support</a>
+                        <a href="#" class="info">Case Studies</a>
+                        <a href="#" class="info">System Status</a>
+                        <a href="#" class="info">Terms of service</a>
+                    </div>
+
+                    <div class="nav_footer">
+                        <a href="#" class="name">Developers</a>
+                        <a href="#" class="info">Documentation</a>
+                        <a href="#" class="info">API Reference</a>
+                        <a href="#" class="info">Guides</a>
+                    </div>
+
+                    <div class="nav_footer">
+                        <a href="#" class="name">Company</a>
+                        <a href="#" class="info">Blog</a>
+                        <a href="#" class="info">Open Source</a>
+                        <a href="#" class="info">Humans.txt</a>
+                        <a href="#" class="info">Lawyers.txt</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer_sun_moon mt-140">
+                <div class="line"></div>
+                <div class="footer_copy">
+                    <p>© Supabase Inc</p>
+
+                    <div class="footer_icon">
+                        <img src="assets/image/footer/sun.png" alt="">
+                        <img src="assets/image/footer/img.png" alt="">
+                        <img src="assets/image/footer/moon.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- footer end -->
+</body>
+
+</html>
